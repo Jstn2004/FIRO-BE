@@ -10,8 +10,9 @@ const PORT = 3000;
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST"]
+    origin: "https://firo-fe.vercel.app", // Deine Frontend-Domain hier angeben
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"], // Stelle sicher, dass der richtige Header gesetzt wird
   }
 });
 
